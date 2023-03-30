@@ -1,23 +1,27 @@
-body{
-   background-color: wheat;
+body {
+   
 }
-.tudo{
-   background-color: blue;
+
+.tudo {
    width: 100%;
-   height:  100%;
+   height: 100%;
    display: flex;
    align-items: center;
    justify-content: center;
+   flex-direction: column;
 }
 
-.cabeçalho{
+.cabeçalho {
    background-color: #CF2B2B;
    width: 414px;
    height: 92px;
-   box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+   box-shadow: 0px 5px 4px rgba(0, 0, 0, 0.25);
+   margin-bottom: 4px;
+   position: absolute;
+   top: 0px;
 }
 
-.nome-do-app{
+.nome-do-app {
    width: 248px;
    height: 44px;
    font-family: 'Righteous';
@@ -31,7 +35,7 @@ body{
    margin-bottom: 5px;
 }
 
-.slogam{
+.slogam {
    width: 226px;
    height: 17px;
    font-family: 'Roboto';
@@ -42,3 +46,188 @@ body{
    color: #FFFFFF;
    margin-left: 21px;
 }
+
+.cardapio {
+   background-color: #E5E5E5;;
+   width: 414px;
+   height: 842px;
+   flex-wrap: wrap;
+   margin-top: 92px;
+}
+
+.escolha-prato,
+.escolha-bebida,
+.escolha-sobremesa {
+   background-color: #E5E5E5;;
+   width: 320px;
+   height: 25px;
+   font-family: 'Righteous';
+   font-style: normal;
+   font-weight: 400;
+   font-size: 26px;
+   line-height: 32px;
+   color: #333333;
+   margin-top: 27px;
+   margin-left: 19px;
+   margin-bottom: 17px;
+}
+
+.pratos {
+  
+   height: 216px;
+   margin-left: 19px;
+   display: flex;
+   overflow-y: scroll;
+
+}
+
+.pratos::-webkit-scrollbar {
+  display: none;
+}
+
+.prato-1 {
+   width: 172px;
+   height: 216px;
+   background: #FFFFFF;
+   box-shadow: 0px 0px 10px -4px rgba(0, 0, 0, 0.25);
+   border-radius: 9px;
+   margin-right: 16px;
+}
+
+.imagem-prato,
+.imagem-bebida {
+   width: 144px;
+   height: 87px;
+   border-radius: 4px;
+   margin-left: 14px;
+   margin-top: 18px;
+}
+
+.nome {
+   width: 139px;
+   height: 23px;
+   font-family: 'Roboto';
+   font-weight: 700;
+   font-size: 16px;
+   line-height: 19px;
+   margin-left: 14px;
+   margin-top: 8px;
+   color: #333333;
+}
+
+.quantidade-prato {
+   width: 147px;
+   height: 39px;
+   font-family: 'Roboto';
+   font-style: normal;
+   font-weight: 300;
+   font-size: 15px;
+   line-height: 18px;
+   margin-top: 4px;
+   margin-left: 14px;
+   color: #A6A6A6;
+}
+
+.preço-prato {
+   width: 66px;
+   height: 19px;
+   font-family: 'Roboto';
+   font-style: normal;
+   font-weight: 400;
+   font-size: 16px;
+   line-height: 19px;
+   margin-top: 5px;
+   margin-left: 14px;
+}
+
+.escolhas-bebida {
+   background-color: rosybrown;
+   width: 250px;
+   height: 25px;
+   font-family: 'Righteous';
+   font-style: normal;
+   font-weight: 400;
+   font-size: 26px;
+   line-height: 32px;
+   color: #333333;
+   margin-top: 31px;
+   margin-left: 19px;
+   margin-bottom: 17px;
+}
+
+
+.bebidas {
+   height: 202px;
+   margin-left: 19px;
+   display: flex;
+    overflow-y: scroll;
+
+}
+
+.bebidas::-webkit-scrollbar {
+  display: none;
+}
+
+.bebidas-1 {
+   width: 172px;
+   height: 202px;
+   background: #FFFFFF;
+   box-shadow: 0px 0px 10px -4px rgba(0, 0, 0, 0.25);
+   border-radius: 9px;
+   margin-right: 16px;
+
+}
+
+.quantidade {
+   width: 147px;
+   height: 18px;
+   font-family: 'Roboto';
+   font-weight: 300;
+   font-size: 15px;
+   line-height: 18px;
+   margin-left: 14px;
+   margin-bottom: 9px;
+   color: #A6A6A6;
+}
+
+.preço {
+
+   width: 66px;
+   height: 19px;
+   font-family: 'Roboto';
+   font-weight: 400;
+   font-size: 16px;
+   line-height: 19px;
+   margin-left: 14px;
+   color: #000000;
+
+}
+
+.sobremesa::-webkit-scrollbar {
+  display: none;
+}
+
+.sobremesa {
+   height: 197px;
+   margin-left: 19px;
+   display: flex;
+    overflow-y: scroll;
+}
+
+.sobremesa-1 {
+   width: 172px;
+   height: 197px;
+   background: #FFFFFF;
+   box-shadow: 0px 0px 10px -4px rgba(0, 0, 0, 0.25);
+   border-radius: 9px;
+   margin-right: 16px;
+}
+
+.imagem-pudim{
+width: 144px;
+height: 82px;
+border-radius: 4px;
+margin-top: 19px;
+margin-left: 14px;
+}
+
