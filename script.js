@@ -15,23 +15,31 @@ function selecionarTudo() {
                 const caixaFinalizar = document.querySelector('.caixa-finalizar');
                 // adiciona a clss botão-finalizar
                 caixaFinalizar.classList.add('botão-finalizar');
-                caixaFinalizar.innerHTML= 'Finalizar Pedido'
+                caixaFinalizar.innerHTML = 'Finalizar Pedido';
+                document.getElementsByClassName("caixa-finalizar").disabled = true;
+
+                let btnRemove = document.getElementById('delete').removeAttribute('disabled');
             }
-            
-
         }
-
     }
-
-
 }
 
+function valorTotal(terminando) {
+    
+    alert('ate aqui tudo bem');
+    // verificar se existe a class aparecer
+    const confirmar = document.querySelector('.tudo .aparecer');
+    console.log(confirmar);
+    // se exixtir ele retira
+    if (confirmar !== null) {
+        confirmar.classList.remove('aparecer');
+    }
 
+}
 
 function selecionarPrato(qualPrato) {
 
     nomePrato = qualPrato.innerHTML;
-    console.log(nomePrato);
     // verificar se existe um dos pratos ja com borda
     // vendo se tem a class borda nele
     const pratoClicadoAntes = document.querySelector('.pratos .borda');
@@ -84,6 +92,13 @@ function selecionarSobremesa(qualSobremesa) {
     // adicionar a borda a ele
     qualSobremesa.classList.add('borda');
     selecionarTudo();
+}
+
+function pedir() {
+    alert('deu certo');
+}
+function cancelar() {
+    alert('cancelado');
 }
 
 

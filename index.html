@@ -26,13 +26,13 @@
                 <h1 class="nome-do-app">DrivenEats</h1>
                 <h3 class="slogam">Sua comida em 6 minutos</h3>
             </div>
-            
-            <div class="cardapio">
-    
+
+            <div class="cardapio" disabled>
+
                 <div class="escolha-prato">Primeiro, seu prato</div>
                 <div class="pratos">
-    
-                    <div class="prato-1" onclick="selecionarPrato(this)">
+
+                    <div class="prato-1" onclick="selecionarPrato(this)" disabled>
                         <div class="imagem-prato">
                             <img src="./imagens/frango_yin_yang.png" alt="">
                         </div>
@@ -47,7 +47,7 @@
                             <img class="vezinho " src="./imagens/Vector.png" alt="">
                         </div>
                     </div>
-    
+
                     <div class="prato-1" onclick="selecionarPrato(this)">
                         <div class="imagem-prato">
                             <img src="./imagens/frango_yin_yang.png" alt="">
@@ -64,7 +64,7 @@
                             <img class="vezinho " src="./imagens/Vector.png" alt="">
                         </div>
                     </div>
-    
+
                     <div class="prato-1" onclick="selecionarPrato(this)">
                         <div class="imagem-prato">
                             <img src="./imagens/frango_yin_yang.png" alt="">
@@ -77,10 +77,10 @@
                         </div>
                         <div class="preço-prato">
                             <p>R$ 14,90</p>
-                            <img class= "vezinho " src="./imagens/Vector.png" alt="">
+                            <img class="vezinho " src="./imagens/Vector.png" alt="">
                         </div>
                     </div>
-    
+
                     <div class="prato-1" onclick="selecionarPrato(this)">
                         <div class="imagem-prato">
                             <img src="./imagens/frango_yin_yang.png" alt="">
@@ -91,13 +91,14 @@
                         <div class="quantidade-prato">
                             Um pouco de batata, um pouco de salada
                         </div>
-                        <div class="preço-prato"><p>R$ 14,90</p>
-                            <img class =" vezinho " src="./imagens/Vector.png" alt="">
+                        <div class="preço-prato">
+                            <p>R$ 14,90</p>
+                            <img class=" vezinho " src="./imagens/Vector.png" alt="">
                         </div>
                     </div>
-    
+
                 </div>
-    
+
                 <div class="escolha-bebida">Agora, sua bebida</div>
                 <div class="bebidas">
                     <div class="bebidas-1" onclick="selecionarBebida(this)">
@@ -112,7 +113,7 @@
                         </div>
                         <div class="preço">R$ 14,90</div>
                     </div>
-    
+
                     <div class="bebidas-1" onclick="selecionarBebida(this)">
                         <div class="imagem-bebida">
                             <img src="./imagens/coca-cola.png" alt="">
@@ -125,7 +126,7 @@
                         </div>
                         <div class="preço">R$ 14,90</div>
                     </div>
-    
+
                     <div class="bebidas-1" onclick="selecionarBebida(this)">
                         <div class="imagem-bebida">
                             <img src="./imagens/coca-cola.png" alt="">
@@ -138,7 +139,7 @@
                         </div>
                         <div class="preço">R$ 14,90</div>
                     </div>
-    
+
                     <div class="bebidas-1" onclick="selecionarBebida(this)">
                         <div class="imagem-bebida">
                             <img src="./imagens/coca-cola.png" alt="">
@@ -151,9 +152,9 @@
                         </div>
                         <div class="preço">R$ 14,90</div>
                     </div>
-    
+
                 </div>
-    
+
                 <div class="escolha-sobremesa">Por fim, sua sobremesa</div>
                 <div class="sobremesa">
                     <div class="sobremesa-1" onclick="selecionarSobremesa(this)">
@@ -168,7 +169,7 @@
                         </div>
                         <div class="preço">R$ 14,90</div>
                     </div>
-    
+
                     <div class="sobremesa-1" onclick="selecionarSobremesa(this)">
                         <div class="imagem-pudim">
                             <img src="./imagens/pudim.png" alt="">
@@ -181,7 +182,7 @@
                         </div>
                         <div class="preço">R$ 14,90</div>
                     </div>
-    
+
                     <div class="sobremesa-1" onclick="selecionarSobremesa(this)">
                         <div class="imagem-pudim">
                             <img src="./imagens/pudim.png" alt="">
@@ -194,7 +195,7 @@
                         </div>
                         <div class="preço">R$ 14,90</div>
                     </div>
-    
+
                     <div class="sobremesa-1" onclick="selecionarSobremesa(this)">
                         <div class="imagem-pudim">
                             <img src="./imagens/pudim.png" alt="">
@@ -207,21 +208,48 @@
                         </div>
                         <div class="preço">R$ 14,90</div>
                     </div>
-    
+
                 </div>
-               
+                <div class="confirmar-pedido aparecer">
+                    <p class="confirmar"> Confrrme seu pedido</p>
+                    <div class="prato-selec">
+                        <p>frango_yin_yang</p>
+                        <div class="valor">14,90 </div>
+                    </div>
+                    <div class="bebida-selec">
+                        <p>Coca</p>
+                        <div class="valor">2,90</div>
+                    </div>
+                    <div class="sobremesa-selec">
+                        <p>Pudin</p>
+                        <div class="valor">5,90</div>
+                    </div>
+                    <div class="valor-total">
+                        <p>TOTAL</p>
+                        <div class="valor-t">R$ 50,90</div>
+                    </div>
+                    <div class="tudo-certo" onclick="pedir()">
+                        <p>Tudo ceto, pode pedir</p>
+                    </div>
+                    <div class="cancelar" onclick="cancelar()"> 
+                        <p>Cancelar</p>
+                    </div>
+                </div>
+
             </div>
-            
+
             <div class="roda-pe">
-                <button class="caixa-finalizar" disabled>
+                <button class="caixa-finalizar" disabled id="delete" onclick="valorTotal(this)">
                     Selecione os 3 itens <br> para fechar o pedido
                 </button>
-    
+
             </div>
-    
+
         </div>
+
+
     </div>
-    
+
 
 
 
