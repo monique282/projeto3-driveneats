@@ -25,8 +25,8 @@ function selecionarTudo() {
 }
 
 function valorTotal(terminando) {
-    
-    alert('ate aqui tudo bem');
+
+
     // verificar se existe a class aparecer
     const confirmar = document.querySelector('.tudo .aparecer');
     console.log(confirmar);
@@ -38,8 +38,9 @@ function valorTotal(terminando) {
 }
 
 function selecionarPrato(qualPrato) {
-
     nomePrato = qualPrato.innerHTML;
+    console.log(nomePrato);
+
     // verificar se existe um dos pratos ja com borda
     // vendo se tem a class borda nele
     const pratoClicadoAntes = document.querySelector('.pratos .borda');
@@ -51,10 +52,10 @@ function selecionarPrato(qualPrato) {
     // adicionar a borda a ele
     qualPrato.classList.add('borda');
 
+ 
 
     selecionarTudo();
 }
-
 
 
 
@@ -95,10 +96,49 @@ function selecionarSobremesa(qualSobremesa) {
 }
 
 function pedir() {
+ 
     alert('deu certo');
 }
-function cancelar() {
-    alert('cancelado');
+
+function cancelar(cancel) {
+    
+    const cancelado = document.querySelector('.tudo .aparecer');
+    console.log(cancelado);
+    if (cancelado !== null) {
+        
+    }
+    const can = document.querySelector('.confirmar-pedido')
+    can.classList.add('aparecer');
 }
+
+// fazer uma caixa pra quardar o valor da prato selecionado
+// fazer uma caixa pra quardar o valor da bebida selecionado
+
+
+
+
+
+
+
+
+
+// fazer uma caixa pra guardar o nome do prato selecionado
+   //1 mostrar esse nome na class  prato-selec dentro do p
+// fazer uma caixa pra quardar o valor da prato selecionado
+  //1 mostrar esse valor na  class prato-selec dentro da div valor
+
+
+
+ // fazer uma caixa pra guardar o nome da bebida selecionado
+   //1 mostrar esse nome na class bebida-selec dentro do p
+// fazer uma caixa pra quardar o valor da bebida selecionado
+  //1 mostrar esse valor na class bebida-selec dentro da div valor
+
+
+
+// fazer uma caixa pra guardar o nome da sobremesa selecionado
+   //1 mostrar esse nome na class sobremesa-selec dentro do p
+// fazer uma caixa pra quardar o valor da sobremesa selecionado
+  //1 mostrar esse valor na  class sobremesa-selec dentro da div valor
 
 
