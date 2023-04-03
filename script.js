@@ -39,34 +39,58 @@ function valorTotal(terminando) {
 
     total = Number(x1) + Number(y1) + Number(z1);
     console.log(total);
+
     const mudar = document.querySelector('.valor-t');
-    mudar = innerHTML = total;
+    mudar.innerHTML = `${total}`;
+
+    const mudarP = document.querySelector('.valor');
+    mudarP.innerHTML = `${x1}`;
+
+    const mudarB = document.querySelector('.valor-2');
+    mudarB.innerHTML = `${y1}`;
+
+    const mudarS = document.querySelector('.valor-3');
+    mudarS.innerHTML = `${z1}`;
+
+    const mudarPra = document.querySelector('.prato-selec p');
+    mudarPra.innerHTML = `${nomePrato}`;
+
+    const mudarBeb = document.querySelector('.bebida-selec p');
+    mudarBeb.innerHTML = `${nomeBebida}`;
+
+    const mudarSob = document.querySelector('.sobremesa-selec p');
+    mudarSob.innerHTML = `${nomesobremesa}`;
+
 
 }
 
 function selecionarPrato(qualPrato) {
-    nomePrato = qualPrato.innerHTML;
+
 
     // verificar se existe um dos pratos ja com borda
     // vendo se tem a class borda nele
     const pratoClicadoAntes = document.querySelector('.pratos .borda');
-    
+
     // se ja existe um prato com borda 
     if (pratoClicadoAntes !== null) {
         //remover a borda
         pratoClicadoAntes.classList.remove('borda');
-       
+
     }
     // adicionar a borda a ele
     qualPrato.classList.add('borda');
 
+    // guardar nome
+    const nomeP = document.querySelector('.borda .nome')
+    nomePrato = nomeP.innerHTML;
+console.log(nomePrato);
 
-
+    // guardar valor
     x = document.querySelector('.borda p');
 
     x1 = x.innerHTML.replace('R$', '').replace(',', '.');
-    Number(x1);
 
+    console.log(Number(x1));
 
     selecionarTudo();
 
@@ -90,11 +114,18 @@ function selecionarBebida(qualBebida) {
     // adicionar a borda a ele
     qualBebida.classList.add('borda');
 
-    y = document.querySelector('.borda .preço');
+     // guardar nome
+     const nomeB = document.querySelector('.borda .nome-b')
+     nomeBebida = nomeB.innerHTML;
+ console.log(nomeBebida);
+ 
+     // guardar valor
+
+    y = document.querySelector('.borda .preço p');
 
     y1 = y.innerHTML.replace('R$', '').replace(',', '.');
-    Number(y1);
-    console.log(y1);
+
+    console.log(Number(y1));
 
     selecionarTudo();
 }
@@ -115,12 +146,18 @@ function selecionarSobremesa(qualSobremesa) {
     // adicionar a borda a ele
     qualSobremesa.classList.add('borda');
 
-    z = document.querySelector('.borda .preço-sobremesa');
+     // guardar nome
+     const nomeS = document.querySelector('.borda .nome-s')
+     nomesobremesa = nomeS.innerHTML;
+ console.log(nomesobremesa);
+ 
+     // guardar valor
 
+    z = document.querySelector('.borda .preço-sobremesa p');
 
     z1 = z.innerHTML.replace('R$', '').replace(',', '.');
-    Number(z1);
-    console.log(z1);
+
+    console.log(Number(z1));
 
     selecionarTudo();
 }
@@ -128,9 +165,9 @@ function selecionarSobremesa(qualSobremesa) {
 function pedir() {
 
     const mensagem = `Olá, gostaria de fazer o pedido\n
-    - Prato: Frango Yin Yang\n
-    - Bebida: Coquinha Gelada\n
-    - Sobremesa: Pudim\n
+    - Prato: ${nomePrato}\n
+    - Bebida: ${nomeBebida}\n
+    - Sobremesa: ${nomesobremesa}\n
     Total: R$ ${total}`
 
     const encode = encodeURIComponent(mensagem);
