@@ -2,7 +2,7 @@
 let nomePrato = '';
 let nomeBebida = '';
 let nomesobremesa = '';
-let x, x1, y, y1, z, z1 = '';
+let x, x1, y, y1, z, z1 , m = '';
 
 let total = '';
 
@@ -18,7 +18,7 @@ function selecionarTudo() {
                 const caixaFinalizar = document.querySelector('.caixa-finalizar');
                 // adiciona a clss botão-finalizar
                 caixaFinalizar.classList.add('botão-finalizar');
-                caixaFinalizar.innerHTML = 'Finalizar Pedido';
+                caixaFinalizar.innerHTML = 'Fechar Pedido';
                 document.getElementsByClassName("caixa-finalizar").disabled = true;
 
                 let btnRemove = document.getElementById('delete').removeAttribute('disabled');
@@ -38,10 +38,11 @@ function valorTotal(terminando) {
     }
 
     total = Number(x1) + Number(y1) + Number(z1);
-    console.log(total);
+    m = parseFloat(total).toFixed(2);
+    console.log(m);
 
     const mudar = document.querySelector('.valor-t');
-    mudar.innerHTML = `${total}`;
+    mudar.innerHTML = `${m}`;
 
     const mudarP = document.querySelector('.valor');
     mudarP.innerHTML = `${x1}`;
@@ -54,12 +55,15 @@ function valorTotal(terminando) {
 
     const mudarPra = document.querySelector('.prato-selec p');
     mudarPra.innerHTML = `${nomePrato}`;
+    console.log(nomePrato);
 
     const mudarBeb = document.querySelector('.bebida-selec p');
     mudarBeb.innerHTML = `${nomeBebida}`;
+    console.log(nomeBebida);
 
     const mudarSob = document.querySelector('.sobremesa-selec p');
     mudarSob.innerHTML = `${nomesobremesa}`;
+    console.log(nomesobremesa);
 
 
 }
@@ -70,20 +74,26 @@ function selecionarPrato(qualPrato) {
     // verificar se existe um dos pratos ja com borda
     // vendo se tem a class borda nele
     const pratoClicadoAntes = document.querySelector('.pratos .borda');
+    const vezinhov = document.querySelector('.preço-prato .vezinho');
+    console.log(vezinhov);
 
     // se ja existe um prato com borda 
     if (pratoClicadoAntes !== null) {
         //remover a borda
         pratoClicadoAntes.classList.remove('borda');
-
+    
+        
     }
     // adicionar a borda a ele
     qualPrato.classList.add('borda');
+    
+    
+    
 
     // guardar nome
     const nomeP = document.querySelector('.borda .nome')
     nomePrato = nomeP.innerHTML;
-console.log(nomePrato);
+    console.log(nomePrato);
 
     // guardar valor
     x = document.querySelector('.borda p');
@@ -114,12 +124,12 @@ function selecionarBebida(qualBebida) {
     // adicionar a borda a ele
     qualBebida.classList.add('borda');
 
-     // guardar nome
-     const nomeB = document.querySelector('.borda .nome-b')
-     nomeBebida = nomeB.innerHTML;
- console.log(nomeBebida);
- 
-     // guardar valor
+    // guardar nome
+    const nomeB = document.querySelector('.borda .nome-b')
+    nomeBebida = nomeB.innerHTML;
+    console.log(nomeBebida);
+
+    // guardar valor
 
     y = document.querySelector('.borda .preço p');
 
@@ -146,12 +156,12 @@ function selecionarSobremesa(qualSobremesa) {
     // adicionar a borda a ele
     qualSobremesa.classList.add('borda');
 
-     // guardar nome
-     const nomeS = document.querySelector('.borda .nome-s')
-     nomesobremesa = nomeS.innerHTML;
- console.log(nomesobremesa);
- 
-     // guardar valor
+    // guardar nome
+    const nomeS = document.querySelector('.borda .nome-s')
+    nomesobremesa = nomeS.innerHTML;
+    console.log(nomesobremesa);
+
+    // guardar valor
 
     z = document.querySelector('.borda .preço-sobremesa p');
 
@@ -164,11 +174,11 @@ function selecionarSobremesa(qualSobremesa) {
 
 function pedir() {
 
-    const mensagem = `Olá, gostaria de fazer o pedido\n
-    - Prato: ${nomePrato}\n
-    - Bebida: ${nomeBebida}\n
-    - Sobremesa: ${nomesobremesa}\n
-    Total: R$ ${total}`
+    const mensagem = `Olá, gostaria de fazer o pedido\n- 
+    Prato: ${nomePrato}\n-
+     Bebida: ${nomeBebida}\n- 
+     Sobremesa: ${nomesobremesa}\n
+     Total: R$ ${m}`
 
     const encode = encodeURIComponent(mensagem);
     window.open(`https://wa.me/38998152601?text=${encode}`);
@@ -186,34 +196,6 @@ function cancelar(cancel) {
     can.classList.add('aparecer');
 }
 
-// fazer uma caixa pra quardar o valor da prato selecionado
-// fazer uma caixa pra quardar o valor da bebida selecionado
 
-
-
-
-
-
-
-
-
-// fazer uma caixa pra guardar o nome do prato selecionado
-   //1 mostrar esse nome na class  prato-selec dentro do p
-// fazer uma caixa pra quardar o valor da prato selecionado
-  //1 mostrar esse valor na  class prato-selec dentro da div valor
-
-
-
- // fazer uma caixa pra guardar o nome da bebida selecionado
-   //1 mostrar esse nome na class bebida-selec dentro do p
-// fazer uma caixa pra quardar o valor da bebida selecionado
-  //1 mostrar esse valor na class bebida-selec dentro da div valor
-
-
-
-// fazer uma caixa pra guardar o nome da sobremesa selecionado
-   //1 mostrar esse nome na class sobremesa-selec dentro do p
-// fazer uma caixa pra quardar o valor da sobremesa selecionado
-  //1 mostrar esse valor na  class sobremesa-selec dentro da div valor
 
 
