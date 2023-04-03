@@ -2,6 +2,9 @@
 let nomePrato = '';
 let nomeBebida = '';
 let nomesobremesa = '';
+let x, x1, y, y1, z, z1 = '';
+
+
 
 function selecionarTudo() {
     // verificar se o pratos foi clicado
@@ -29,32 +32,46 @@ function valorTotal(terminando) {
 
     // verificar se existe a class aparecer
     const confirmar = document.querySelector('.tudo .aparecer');
-    console.log(confirmar);
     // se exixtir ele retira
     if (confirmar !== null) {
         confirmar.classList.remove('aparecer');
     }
 
+    const total = Number(x1) + Number(y1) + Number(z1);
+    console.log(total);
+    const mudar = document.querySelector('.valor-t');
+    mudar = innerHTML = total ;
+
 }
 
 function selecionarPrato(qualPrato) {
     nomePrato = qualPrato.innerHTML;
-    console.log(nomePrato);
+
+
 
     // verificar se existe um dos pratos ja com borda
     // vendo se tem a class borda nele
     const pratoClicadoAntes = document.querySelector('.pratos .borda');
+
     // se ja existe um prato com borda 
     if (pratoClicadoAntes !== null) {
         //remover a borda
         pratoClicadoAntes.classList.remove('borda');
+
     }
     // adicionar a borda a ele
     qualPrato.classList.add('borda');
 
- 
+
+
+    x = document.querySelector('.borda p');
+
+    x1 = x.innerHTML.replace('R$', '').replace(',', '.');
+    Number(x1);
+    
 
     selecionarTudo();
+    
 }
 
 
@@ -74,6 +91,13 @@ function selecionarBebida(qualBebida) {
 
     // adicionar a borda a ele
     qualBebida.classList.add('borda');
+
+    y = document.querySelector('.borda .preço');
+
+    y1 = y.innerHTML.replace('R$', '').replace(',', '.');
+    Number(y1);
+    console.log(y1);
+
     selecionarTudo();
 }
 
@@ -92,20 +116,28 @@ function selecionarSobremesa(qualSobremesa) {
 
     // adicionar a borda a ele
     qualSobremesa.classList.add('borda');
+
+    z = document.querySelector('.borda .preço-sobremesa');
+
+
+    z1 = z.innerHTML.replace('R$', '').replace(',', '.');
+    Number(z1);
+    console.log(z1);
+
     selecionarTudo();
 }
 
 function pedir() {
- 
-    alert('deu certo');
+
+
 }
 
 function cancelar(cancel) {
-    
+
     const cancelado = document.querySelector('.tudo .aparecer');
     console.log(cancelado);
     if (cancelado !== null) {
-        
+
     }
     const can = document.querySelector('.confirmar-pedido')
     can.classList.add('aparecer');
