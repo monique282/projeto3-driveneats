@@ -4,7 +4,7 @@ let nomeBebida = '';
 let nomesobremesa = '';
 let x, x1, y, y1, z, z1 = '';
 
-
+let total = '';
 
 function selecionarTudo() {
     // verificar se o pratos foi clicado
@@ -37,27 +37,25 @@ function valorTotal(terminando) {
         confirmar.classList.remove('aparecer');
     }
 
-    const total = Number(x1) + Number(y1) + Number(z1);
+    total = Number(x1) + Number(y1) + Number(z1);
     console.log(total);
     const mudar = document.querySelector('.valor-t');
-    mudar = innerHTML = total ;
+    mudar = innerHTML = total;
 
 }
 
 function selecionarPrato(qualPrato) {
     nomePrato = qualPrato.innerHTML;
 
-
-
     // verificar se existe um dos pratos ja com borda
     // vendo se tem a class borda nele
     const pratoClicadoAntes = document.querySelector('.pratos .borda');
-
+    
     // se ja existe um prato com borda 
     if (pratoClicadoAntes !== null) {
         //remover a borda
         pratoClicadoAntes.classList.remove('borda');
-
+       
     }
     // adicionar a borda a ele
     qualPrato.classList.add('borda');
@@ -68,10 +66,10 @@ function selecionarPrato(qualPrato) {
 
     x1 = x.innerHTML.replace('R$', '').replace(',', '.');
     Number(x1);
-    
+
 
     selecionarTudo();
-    
+
 }
 
 
@@ -129,6 +127,14 @@ function selecionarSobremesa(qualSobremesa) {
 
 function pedir() {
 
+    const mensagem = `Olá, gostaria de fazer o pedido\n
+    - Prato: Frango Yin Yang\n
+    - Bebida: Coquinha Gelada\n
+    - Sobremesa: Pudim\n
+    Total: R$ ${total}`
+
+    const encode = encodeURIComponent(mensagem);
+    window.open(`https://wa.me/38998152601?text=${encode}`);
 
 }
 
