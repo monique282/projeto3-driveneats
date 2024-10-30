@@ -17,7 +17,7 @@ body {
 
 }
 
-.tudo {
+.all {
    background-color: wheat;
    width: 414px;
    height: 100%;
@@ -29,7 +29,7 @@ body {
 }
 
 
-.cabeçalho {
+.header {
    background-color: #CF2B2B;
    width: 414px;
    height: 92px;
